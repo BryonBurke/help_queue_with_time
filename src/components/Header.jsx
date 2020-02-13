@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const styles = {
@@ -11,7 +12,12 @@ function Header() {
         fontSize: '6vh',
         lineHeight: '8vh',
     };
-    return <h1 style={styles}>Queue</h1>;
+    return (
+      <div>
+        <h1 style={styles}>Queue</h1>
+        <Link to ="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
+      </div>
+    );
 }
 
 export default Header;
